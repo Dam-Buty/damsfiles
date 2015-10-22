@@ -1,0 +1,73 @@
+# Panel conky
+######################
+# - Conky settings - #
+######################
+background yes
+update_interval 2
+update_interval_on_battery = 3
+cpu_avg_samples 1
+total_run_times 0
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 10240
+imlib_cache_size 10240
+
+# For screen size 1366x768
+minimum_size 1600 15
+maximum_width 1600
+
+gap_x 0
+gap_y 0
+alignment tr
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont ubuntu:size=10
+xftalpha 1
+
+short_units yes
+uppercase no
+
+
+######################
+# - Color settings - #
+######################
+
+color1 a0a0a0 #separator
+color2 1AAA13 # cpu
+color3 00CABA #ram
+color4 FF6B6B #temp
+color5 FFAA3E #disk
+color6 ff005b #zik
+
+default_color ffffff # Text
+
+#############################
+# - Window specifications - #
+#############################
+own_window yes
+own_window_colour 0a0b09
+own_window_argb_visual yes
+own_window_transparent no
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+border_inner_margin 0
+border_outer_margin 0
+
+#########################
+# - Graphics settings - #
+#########################
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 0
+draw_graph_borders no
+
+
+ TEXT
+${color1} | ${color2}CPU ${color}${cpu cpu0}%${color1} | ${color3}RAM ${color}${mem}${color1} | ${color4}TEMP ${color}${platform coretemp.0 temp 2}°${color1} | ${color5}SSD ${color}${fs_free }${color1} | ${color4} MAJ ${color}${execi 300 pacman -Qu | wc -l}${color1} | ${color #ff3030} ZIK ${color} ${if_mpd_playing}${mpd_smart 50} ${mpd_elapsed}/${mpd_length}${else}${mpd_status}${endif}${color1} | ${color #ff3d3d} BAT ${color} ${execi 30 acpi -b | awk '{print$5}'} ${color1} | ${color #FFAA3E} MAIL ${color} ${execpi 300 ~/Scripts/imap.pl} ${color} - ${color} ${execpi 300 ~/Scripts/imap2.pl} ${color1} | ${color2}${time %H %M} ${color1} | ${color3} VOL ${color} ${exec amixer get Master -M | grep -oE "[[:digit:]]*%"}

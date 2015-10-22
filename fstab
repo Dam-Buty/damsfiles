@@ -1,0 +1,13 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+#
+UUID=5b1bae4a-acd9-4185-b76a-d2bdc6eb064b / btrfs defaults,rw,relatime,space_cache,autodefrag,inode_cache 0 0
+/dev/sda5 /mnt/cargo ntfs defaults 0 0
+//mafreebox.freebox.fr/Disque\040dur /mnt/base cifs _netdev,rw,users,iocharset=utf8,uid=1000,sec=none,file_mode=0777,dir_mode=0777 0 0
+//mafreebox.freebox.fr/Disque\0404 /mnt/extra cifs _netdev,rw,users,iocharset=utf8,uid=1000,sec=none,file_mode=0777,dir_mode=0777 0 0
+chad@aido.local:/var/www  /mnt/www   fuse.sshfs	defaults,allow_other,_netdev,idmap=user,identityfile=/home/chad/.ssh/id_sshfs,transform_symlinks,default_permissions,uid=1000,gid=100    0  0
