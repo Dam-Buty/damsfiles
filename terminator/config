@@ -1,0 +1,151 @@
+[global_config]
+  borderless = True
+  hide_from_taskbar = True
+  suppress_multiple_term_dialog = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = eb96d163-b849-4295-bc61-e013d53e7fc1
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 1280, 998
+      title = chad@anterchad:~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 639
+      ratio = 0.499609375
+      type = HPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 498
+      ratio = 0.499498997996
+      type = VPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = eb96d163-b849-4295-bc61-e013d53e7fc1
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = dino.local
+      type = Terminal
+      uuid = 18b00d75-76b5-4c8e-84f3-ca74c45beffa
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 6e8bbc18-1876-4219-9a3f-8bed2671acd9
+  [[HUD]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 4d56c3ac-b9be-409d-9246-932ca7776309
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 1280:86
+      size = 678, 618
+      title = chad@anterchad:~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 307
+      ratio = 0.497572815534
+      type = VPaned
+    [[[terminal2]]]
+      command = ./du-son-gaston.sh
+      order = 0
+      parent = child1
+      profile = HUD_SON
+      type = Terminal
+      uuid = a3def9ee-700a-44de-a63c-b35327e78ee9
+    [[[terminal3]]]
+      command = ./chad-clock.sh
+      order = 1
+      parent = child1
+      profile = HUD
+      type = Terminal
+      uuid = 4d56c3ac-b9be-409d-9246-932ca7776309
+  [[Nouvel agencement]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 4d56c3ac-b9be-409d-9246-932ca7776309
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 1280:86
+      size = 678, 618
+      title = chad@anterchad:~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 307
+      ratio = 0.497572815534
+      type = VPaned
+    [[[terminal2]]]
+      command = ./du-son-gaston.sh
+      order = 0
+      parent = child1
+      profile = HUD_SON
+      type = Terminal
+      uuid = a3def9ee-700a-44de-a63c-b35327e78ee9
+    [[[terminal3]]]
+      command = ./chad-clock.sh
+      order = 1
+      parent = child1
+      profile = HUD
+      type = Terminal
+      uuid = 4d56c3ac-b9be-409d-9246-932ca7776309
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.87
+    background_image = /home/chad/Downloads/89358.jpg
+    background_type = image
+    scroll_background = False
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[HUD]]
+    background_color = "#002b36"
+    background_darkness = 1.16
+    background_image = /home/chad/Downloads/International_Space_Station_after_undocking_of_STS-132.png
+    background_type = image
+    exit_action = hold
+    foreground_color = "#839496"
+    scroll_background = False
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[HUD_SON]]
+    background_color = "#002b36"
+    background_darkness = 0.69
+    background_image = /home/chad/Downloads/International_Space_Station_after_undocking_of_STS-132.png
+    background_type = image
+    exit_action = hold
+    foreground_color = "#839496"
+    scroll_background = False
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[dino.local]]
+    background_darkness = 0.98
+    background_image = None
+    background_type = transparent
+    custom_command = ssh ido.local
+    exit_action = hold
+    foreground_color = "#00ff00"
+    scrollbar_position = hidden
+    show_titlebar = False
