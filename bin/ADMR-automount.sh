@@ -1,0 +1,1 @@
+/home/chad/dev/www/ADMR/ADMR-automount.sh
