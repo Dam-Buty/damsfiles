@@ -5,8 +5,9 @@
 #<ip-address>	<hostname.domain.org>	<hostname>
 127.0.0.1	localhost.localdomain	localhost
 ::1		localhost.localdomain	localhost
-127.0.1.1	chad.local	chad
-192.168.0.24	damso.local	damso
-192.168.0.45	raspi.local	raspi
-
+192.168.0.33	aido.local		aido
+192.168.0.26	micro.local		dodobox
+192.168.0.14	epson.local		epson
+192.168.0.21	mini.local		lubuntu
+192.178.253.235	hestia-dev.admr.info		hestia-dev
 # End of file

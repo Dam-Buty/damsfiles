@@ -1,0 +1,12 @@
+type = internal/network
+interface = eno1
+interval = 3.0
+
+; format-connected-underline = ${colors.good}
+format-connected-prefix = ⛓
+label-connected = %upspeed% / %downspeed%
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = ⛓
+format-disconnected-underline = ${colors.alert}
+label-disconnected = " "

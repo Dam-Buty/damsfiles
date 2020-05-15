@@ -1,2 +1,3 @@
 # damsfiles
-Mes dotfiles, fstabs et autres configs
+
+Dotfiles for my current rice. Based largely around i3wm, polybar and rofi !

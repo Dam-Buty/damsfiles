@@ -1,0 +1,18 @@
+type = internal/temperature
+thermal-zone = 2
+
+base-temperature = 40
+warn-temperature = 80
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${colors.alert}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = ❄️
+ramp-1 = 🕯️
+ramp-2 = 🔥
+ramp-foreground = ${colors.foreground-alt}

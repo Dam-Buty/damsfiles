@@ -1,0 +1,114 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+;############################
+; COLORS AND VARIABLES
+;############################
+[colors]
+include-file = /home/chad/.config/polybar/includes/colors
+
+;############################
+; BARS
+;############################
+[bar/left]
+include-file = /home/chad/.config/polybar/bars/left
+
+[bar/right]
+include-file = /home/chad/.config/polybar/bars/right
+
+[bar/power]
+include-file = /home/chad/.config/polybar/includes/fonts
+
+monitor = ${env:MONITOR:DVI-I-1}
+height = 25
+
+background = ${colors.background-bottom}
+
+override-redirect = true
+bottom = true
+modules-right = powermenu
+
+;############################
+; MODULES
+;############################
+[module/i3]
+include-file = /home/chad/.config/polybar/modules/i3
+
+[module/lan]
+include-file = /home/chad/.config/polybar/modules/lan
+
+[module/memory]
+include-file = /home/chad/.config/polybar/modules/memory
+
+[module/cpu]
+include-file = /home/chad/.config/polybar/modules/cpu
+
+[module/volume]
+include-file = /home/chad/.config/polybar/modules/volume
+
+[module/temperature]
+include-file = /home/chad/.config/polybar/modules/temperature
+
+[module/powermenu]
+include-file = /home/chad/.config/polybar/modules/powermenu
+
+[module/xwindow]
+type = internal/xwindow
+label = 👉 %title:0:70:...% 👈
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix = "⌚ "
+format-prefix-foreground = ${colors.foreground-alt}
+
+label = %date% %time%
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
