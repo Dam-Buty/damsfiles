@@ -22,7 +22,7 @@ padding-right = 2
 module-margin-left = 4
 module-margin-right = 4
 
-modules-left = filesystem
+modules-left = fs-root fs-zin fs-cargo fs-old fs-gamz
 modules-center = xwindow
 modules-right = i3
 

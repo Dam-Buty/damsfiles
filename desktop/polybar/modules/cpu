@@ -5,6 +5,7 @@ format-prefix = "⚡"
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage%%
 
+ramp-coreload-foreground = ${colors.good}
 ramp-coreload-spacing = 1
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂

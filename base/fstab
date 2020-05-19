@@ -25,5 +25,5 @@ damso@damso.local:/home/damso/ /data/damso  fuse.sshfs noauto,x-systemd.automoun
 #damso@damso.local:/home/damso/ /data/damso  fuse.sshfs _netdev,users,follow_symlinks,idmap=user,IdentityFile=/home/chad/.ssh/id_rsa,allow_other,default_permissions,uid=1000,gid=1000,reconnect 0 0
 
 # Shared folders on Freebox
-#//192.168.0.254/Disque\040dur /data/base cifs _netdev,rw,users,iocharset=utf8,uid=1000,sec=none,file_mode=0777,dir_mode=0777,vers=1.0 0 0
-#//192.168.0.254/Disque\0404 /data/extra cifs _netdev,rw,users,iocharset=utf8,uid=1000,sec=none,file_mode=0777,dir_mode=0777,vers=1.0 0 0
+//192.168.0.254/Disque\040dur /data/base cifs _netdev,rw,users,iocharset=utf8,uid=1000,sec=none,file_mode=0777,dir_mode=0777,vers=1.0 0 0
+//192.168.0.254/Disque\0404 /data/extra cifs _netdev,rw,users,iocharset=utf8,uid=1000,sec=none,file_mode=0777,dir_mode=0777,vers=1.0 0 0

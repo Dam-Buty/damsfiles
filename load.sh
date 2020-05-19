@@ -1,24 +1,23 @@
 #!/bin/bash
 
-# Copy base config files
+# System
 cp base/hosts /etc/hosts 
 cp base/fstab /etc/fstab
+cp base/.bashrc ~/.bashrc
 cp base/.xinitrc ~/.xinitrc
-cp base/.bashrc ~/.xinitrc
-cp base/opa.png ~/opa.png
+cp /etc/xdg/picom.conf /etc/xdg/picom.conf
 cp -r base/.screenlayout ~
 
-# Copy picom config
-cp /etc/xdg/picom.conf /etc/xdg/picom.conf
-
-# Copy i3 config
+# Desktop
+cp base/opa.png ~/opa.png
 cp desktop/i3/config /etc/i3
+cp -r desktop/polybar ~/.config 
+cp -r desktop/rofi ~/.config 
 
-# Copy polybar config
-cp -r desktop/polybar ~/.config/polybar 
-
-# Copy rofi config
-cp -r desktop/rofi ~/.config/rofi 
+# Music
+cp music/mpd.conf etc
+mkdir -p ~/.ncmpcpp
+cp music/.ncmpcpp ~/.ncmpcpp/config 
 
 # Copy scripts
 cp -r bin ~

@@ -62,28 +62,47 @@ include-file = /home/chad/.config/polybar/modules/powermenu
 type = internal/xwindow
 label = 👉 %title:0:70:...% 👈
 
-[module/filesystem]
-type = internal/fs
-interval = 25
-
+[module/fs-root]
+include-file = /home/chad/.config/polybar/modules/filesystem
 mount-0 = /
+label-mounted = 🌳 %{F#0a81f5}%{F-} : %used% / %total%
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+[module/fs-zin]
+include-file = /home/chad/.config/polybar/modules/filesystem
+mount-0 = /data/zin
+label-mounted = 🌻 %{F#0a81f5}%{F-} : %used% / %total%
+
+[module/fs-cargo]
+include-file = /home/chad/.config/polybar/modules/filesystem
+mount-0 = /data/cargo
+label-mounted = 🌾 %{F#0a81f5}%{F-} : %used% / %total%
+
+[module/fs-old]
+include-file = /home/chad/.config/polybar/modules/filesystem
+mount-0 = /data/old
+label-mounted = 🍁 %{F#0a81f5}%{F-} : %used% / %total%
+
+[module/fs-gamz]
+include-file = /home/chad/.config/polybar/modules/filesystem
+mount-0 = /data/gamz
+label-mounted = 🎄 %{F#0a81f5}%{F-} : %used% / %total%
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next> <icon-random>
+format-offline = <label-offline>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-prev = ⏮
+icon-stop = ⏹
+icon-play = ▶️
+icon-pause = ⏸
+icon-next = ⏭
+icon-random = 🔀
 
-label-song-maxlen = 25
-label-song-ellipsis = true
+label-song = 🎸 %artist% - %title%
+label-offline = 🤷‍♀️ 🔇 🤷‍♀️
+; label-song-maxlen = 60
+; label-song-ellipsis = true
 
 [module/date]
 type = internal/date

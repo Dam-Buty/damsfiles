@@ -1,31 +1,29 @@
 #!/bin/bash
 
 # Cleanup
-rm -rf base bin desktop
+rm -rf base bin desktop music
 
 # Recreate folder structure
-mkdir base bin desktop
+mkdir base bin desktop music
 mkdir desktop/i3 desktop/polybar desktop/rofi
 
-# Copy base config files
+# System
 cp /etc/hosts base
 cp /etc/fstab base
-cp ~/.xinitrc base
 cp ~/.bashrc base
-cp ~/opa.png base
+cp ~/.xinitrc base
+cp /etc/xdg/picom.conf base
 cp -r ~/.screenlayout base
 
-# Copy picom config
-cp /etc/xdg/picom.conf base
-
-# Copy i3 config
+# Desktop
+cp ~/opa.png desktop
 cp /etc/i3/config desktop/i3
-
-# Copy polybar config
 cp -r ~/.config/polybar desktop
-
-# Copy rofi config
 cp -r ~/.config/rofi desktop
+
+# Music
+cp /etc/mpd.conf music
+cp ~/.ncmpcpp/config music/.ncmpcpp
 
 # Copy scripts
 cp -r ~/bin ./

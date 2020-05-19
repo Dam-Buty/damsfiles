@@ -35,9 +35,6 @@ floating_modifier $mod
 bindsym $mod+Return exec terminator
 # kill focused window
 bindsym $mod+Shift+a kill
-# DMenu
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -theme purple
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="rofi -dmenu -b -i"
 # Move focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -177,19 +174,25 @@ mode "$mode_gaps_outer" {
 # Custom shortcuts
 ####################
 # Application quick start
-# bindsym Control+Shift+l exec /home/chad/bin/blur-lock.sh
+# Application menu
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -theme purple
+# Google search
+bindsym Control+Shift+f exec /home/chad/bin/dmenu-search.sh
+# Window switcher
+bindsym Mod1+Tab exec --no-startup-id rofi -show window -show-icons -theme purple-alt-tab "Switch to"
 bindsym Control+Shift+s exec thunar
 bindsym Control+Shift+c exec google-chrome-stable
 bindsym Control+Shift+a exec code-oss
-bindsym Control+Shift+f exec /home/chad/bin/dmenu-search.sh
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="rofi -dmenu -b -i"
 # bindsym Control+Shift+k exec /home/chad/bin/chad-kaamelott.sh
+# bindsym Control+Shift+l exec /home/chad/bin/blur-lock.sh
 
 # MPC
 bindsym Control+Shift+Left exec mpc prev
 bindsym Control+Shift+Right exec mpc next
-bindsym Control+Shift+Down exec pactl set-sink-volume 2 -5%
-bindsym Control+Shift+Up exec pactl set-sink-volume 2 +5%
-bindsym Control+Shift+Delete exec pactl set-sink-mute 0 toggle
+bindsym Control+Shift+Down exec pactl set-sink-volume 1 -5%
+bindsym Control+Shift+Up exec pactl set-sink-volume 1 +5%
+bindsym Control+Shift+Delete exec pactl set-sink-mute 1 toggle
 bindsym Control+Shift+space exec mpc toggle
 
 #############
