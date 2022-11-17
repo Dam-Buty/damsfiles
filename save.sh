@@ -1,29 +1,20 @@
 #!/bin/bash
 
-# Cleanup
-rm -rf base bin desktop music
-
-# Recreate folder structure
-mkdir base bin desktop music
-mkdir desktop/i3 desktop/polybar desktop/rofi
+rm -rf files
+mkdir files
 
 # System
-cp /etc/hosts base
-cp /etc/fstab base
-cp ~/.bashrc base
-cp ~/.xinitrc base
-cp /etc/xdg/picom.conf base
-cp -r ~/.screenlayout base
+cp --parents /etc/fstab files
+cp --parents /etc/nanorc files
+cp --parents ~/.bashrc files
+cp --parents ~/.xinitrc files
+cp --parents /etc/xdg/picom.conf files
+cp --parents ~/.cache/nincat/nincat_* files
+cp --parents ~/.config/terminator/config files
+cp --parents ~/.gitconfig files
+
 
 # Desktop
-cp ~/opa.png desktop
-cp /etc/i3/config desktop/i3
-cp -r ~/.config/polybar desktop
-cp -r ~/.config/rofi desktop
-
-# Music
-cp /etc/mpd.conf music
-cp ~/.ncmpcpp/config music/.ncmpcpp
-
-# Copy scripts
-cp -r ~/bin ./
+cp --parents ~/bg.jpg files
+cp --parents ~/.config/i3/config files
+cp -r --parents  ~/.config/polybar files

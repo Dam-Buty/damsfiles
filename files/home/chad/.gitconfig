@@ -1,0 +1,7 @@
+[protocol "file"]
+	allow = always
+[user]
+	name = Damien BUTY
+	email = dam.buty@gmail.com
+[core]
+	editor = nano

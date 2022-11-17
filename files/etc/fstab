@@ -1,0 +1,35 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+
+# Boot partition
+# /dev/sdb1
+UUID=6CB3-457F      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# Main partition volumes
+# /dev/sdb2
+UUID=71d990d9-80c9-4707-b772-03e810e15d95	/         	btrfs     	rw,relatime,ssd,space_cache=v2,subvolid=256,subvol=/@	0 0
+
+# /dev/sdb2
+UUID=71d990d9-80c9-4707-b772-03e810e15d95	/var/log  	btrfs     	rw,relatime,ssd,space_cache=v2,subvolid=258,subvol=/@log	0 0
+
+# /dev/sdb2
+UUID=71d990d9-80c9-4707-b772-03e810e15d95	/.snapshots	btrfs     	rw,relatime,ssd,space_cache=v2,subvolid=260,subvol=/@.snapshots	0 0
+
+# /dev/sdb2
+UUID=71d990d9-80c9-4707-b772-03e810e15d95	/home     	btrfs     	rw,relatime,ssd,space_cache=v2,subvolid=257,subvol=/@home	0 0
+
+# /dev/sdb2
+UUID=71d990d9-80c9-4707-b772-03e810e15d95	/var/cache/pacman/pkg	btrfs     	rw,relatime,ssd,space_cache=v2,subvolid=259,subvol=/@pkg	0 0
+
+# External  drives
+# /dev/sda3
+UUID=80db8ead-6b40-464b-b2db-c19255ad210e	/data/cargo	ext4     	defaults	0 0
+
+# /dev/sdc
+UUID=04B06254B0624C6C	/data/fatso	ntfs3     	defaults	0 0
+
+
+
+

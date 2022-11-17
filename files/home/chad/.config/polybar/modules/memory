@@ -1,0 +1,22 @@
+type = internal/memory
+interval = 2
+warn-percentage = 85
+
+label = "%gb_used%"
+
+format = <label> <ramp-used>
+; format-underline = ${colors.good}
+format-font = 2
+format-warn-underline = ${colors.alert}
+format-warn-font = 2
+
+ramp-used-foreground = ${colors.neutral}
+ramp-used-spacing = 1
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █

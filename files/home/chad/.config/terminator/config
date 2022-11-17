@@ -1,0 +1,28 @@
+[global_config]
+  borderless = True
+  putty_paste_style_source_clipboard = True
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 1.0
+    background_type = transparent
+    cursor_shape = underline
+    font = Hack Nerd Font 11
+    foreground_color = "#eadbb2"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#282828:#cc231c:#689d69:#d79922:#458587:#cb92db:#06989a:#b2c19c:#594556:#cb92db:#458e71:#86992d:#729fcf:#ad7fa8:#47a092:#eadbb2"
+    use_system_font = False
+    title_use_system_font = False
+    title_font = monofur Bold 9
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

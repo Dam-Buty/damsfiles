@@ -1,0 +1,33 @@
+type = internal/fs
+interval = 25
+warn-percentage = 50
+
+label-mounted = %used%
+format-mounted = <label-mounted> <ramp-capacity>
+format-mounted-font = 2
+
+label-unmounted =  %mountpoint%
+label-unmounted-foreground = ${colors.foreground-alt}
+format-unmounted-font = 2
+
+bar-used-indicator =
+bar-used-width = 5
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+ramp-capacity-foreground = ${colors.secondary}
+ramp-capacity-spacing = 1
+ramp-capacity-0 = ●
+ramp-capacity-1 = ◕
+ramp-capacity-2 = ◑
+ramp-capacity-3 = ◔
+ramp-capacity-4 = ◯
+ramp-capacity-font = 3
+; ramp-capacity-5 = ▆
+; ramp-capacity-6 = ▇
+; ramp-capacity-7 = █
